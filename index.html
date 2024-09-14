@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zipper_Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="it-background">
+            <img src="padure.jpg" alt="A forest background image">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-section hidden">
+            <img src="My Foto.jpg" alt="Profile picture of Denis G." class="profile-pic">
+            <h1>Denis G.</h1>
+            <div class="team-leader-block hidden">
+                <div class="icon-star">⭐</div>
+                <strong>TeamLeader</strong>
+            </div>
+        </div>
+
+        <section class="description block hidden">
+            <h2>My Description</h2>
+            <p>
+                Sunt Team Leader cu 2 ani de experiență în procesarea facturilor. Sunt aici să te ajut cu dificultățile întâmpinate și să ofer instruire pentru proiectele noi.<br>
+            </p>
+            <p>
+                <span class="ps">P.S.</span> Dacă dorești să mă cunoști mai bine, mă poți invita în oraș. Ador Lasagna și Pizza cu o Cola rece, dar nici nu voi fi împotriva dacă mă inviți la o înghețată Joc de 2 lei 😂
+            </p>
+        </section>
+
+        <section class="skills block hidden">
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li>Fast Typing</li>
+                <li>Responsive</li>
+                <li>Punctually</li>
+                <li>Multitasking</li>
+            </ul>
+        </section>
+
+        <section class="contacts block hidden">
+            <h2>Contacts</h2>
+            <p>Sunt disponibil pentru orice întrebare în platformele de mai jos</p>
+            <a href="https://contacts.google.com/denis.grosu@unifiedpost.com" class="btn">Send a message</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gr.den_03/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://t.me/dencik_03" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let delay = 0;
+
+            // Show profile section
+            setTimeout(() => {
+                document.querySelector('.profile-section').classList.remove('hidden');
+                document.querySelector('.profile-section').style.animation = `fadeIn 1s ease-out`;
+            }, delay += 1000);
+
+            // Show team leader block
+            setTimeout(() => {
+                document.querySelector('.team-leader-block').classList.remove('hidden');
+                document.querySelector('.team-leader-block').style.animation = `fadeIn 1s ease-out`;
+            }, delay += 1000);
+
+            // Show description
+            setTimeout(() => {
+                document.querySelector('.description').classList.remove('hidden');
+                document.querySelector('.description').style.animation = `fadeIn 1s ease-out`;
+            }, delay += 1000);
+
+            // Show skills
+            setTimeout(() => {
+                document.querySelector('.skills').classList.remove('hidden');
+                document.querySelector('.skills').style.animation = `fadeIn 1s ease-out`;
+            }, delay += 1000);
+
+            // Show contacts
+            setTimeout(() => {
+                document.querySelector('.contacts').classList.remove('hidden');
+                document.querySelector('.contacts').style.animation = `fadeIn 1s ease-out`;
+            }, delay += 1000);
+        });
+    </script>
+</body>
+</html>

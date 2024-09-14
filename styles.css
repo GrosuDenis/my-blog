@@ -1,0 +1,355 @@
+/* Definirea animațiilor */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Stil global pentru toate titlurile h2 */
+h2 {
+    font-size: 24px;
+}
+
+.ps {
+    font-weight: bold;
+}
+
+/* Stiluri generale */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #606060, #bebebe);
+    color: #000000;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Fundal IT */
+.it-background img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    opacity: 80%;
+}
+
+/* Imaginea de profil între fundalul IT și secțiunea de culoare */
+.profile-section.hidden {
+    opacity: 0;
+}
+
+.profile-section {
+    position: relative;
+    top: -80px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Imaginea de profil */
+.profile-pic {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center 18%;
+}
+
+/* Numele */
+h1 {
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+/* Blocul cu titlul "TeamLeader" */
+.team-leader-block.hidden {
+    opacity: 0;
+}
+
+.team-leader-block {
+    margin: 20px auto;
+    width: 250px;
+    height: 50px;
+    background-color: #105494;
+    color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+/* Iconiță stea */
+.icon-star {
+    font-size: 20px;
+}
+
+/* Fundal stil "glass" pentru secțiuni */
+.block {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.90), rgba(122, 122, 122, 0.473));
+    border-radius: 20px; /* Colțuri rotunjite */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    backdrop-filter: blur(10px); /* Efect de blur pentru fundal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbră ușoară */
+    max-width: 620px;
+}
+
+/* Secțiunea "My Description" */
+.description.hidden {
+    opacity: 0;
+}
+
+/* Secțiunea "My Skills" */
+.skills.hidden {
+    opacity: 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+}
+
+/* Fundal și stil pentru lista de skill-uri */
+.skills-list li {
+    background: none; /* Elimină gradientul pentru skill-uri */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Bordură semi-transparentă */
+    color: #fff; /* Text alb */
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Gradient pentru skill-uri */
+.skills-list li:nth-child(1) {
+    background: linear-gradient(to right, #09acda, #0d54ac);
+}
+
+.skills-list li:nth-child(2) {
+    background: linear-gradient(to right, #d3be06, #a76105);
+}
+
+.skills-list li:nth-child(3) {
+    background: linear-gradient(to right, #14865e, #73d697);
+}
+
+.skills-list li:nth-child(4) {
+    background: linear-gradient(to right, #05afdf, #b8099d);
+}
+
+/* Secțiunea "Contacts" */
+.contacts.hidden {
+    opacity: 0;
+}
+
+.btn {
+    font-weight: 550;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(11, 46, 163, 0.7); /* Fundal semi-transparent alb */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Bordură semi-transparentă */
+    color: #ffffffc5; /* Text alb */
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0,3;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundal semi-transparent alb */
+    border: 2px solid rgba(0, 0, 0, 0.4); /* Bordură semi-transparentă */
+    color: #000000e0; /* Text alb */
+}
+
+/* Stil pentru iconițele social media */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Mărește iconița la hover */
+}
+
+/* Media queries pentru dispozitive mai mici */
+@media (max-width: 1000px) {
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-section {
+        top: -90px;
+    }
+
+    .block {
+        width: 90%;
+    }
+
+    .skills-list li {
+        width: 180px;
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-section {
+        top: -80px;
+    }
+
+    .block {
+        width: 80%;
+        font-size: 13pt;
+    }
+
+    .skills-list li {
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 16pt;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-leader-block {
+        font-size: 14pt;
+        width: 190px;
+        height: 40px;
+    }
+
+    .profile-section {
+        top: -70px;
+    }
+
+    .block {
+        width: 80%;
+        margin: 10px auto;
+        font-size: 12pt;
+    }
+
+    .skills-list li {
+        width: 160px;
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 15pt;
+    }
+    
+    .team-leader-block {
+        font-size: 13pt;
+        width: 180px;
+        height: 40px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-section {
+        top: -70px;
+    }
+
+    .block {
+        width: 80%;
+        margin: 5px auto;
+        font-size: 12pt;
+    }
+
+    .skills-list li {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 300px) {
+    h2 {
+        font-size: 13pt;
+    }
+
+    .team-leader-block {
+        font-size: 12pt;
+        width: 165px;
+        height: 38px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-section {
+        top: -60px;
+    }
+
+    .block {
+        width: 80%;
+        margin: 5px auto;
+        font-size: 10pt;
+    }
+
+    .skills-list li {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}
